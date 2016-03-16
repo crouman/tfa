@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>TFA - Setup</title>
+
+	<!-- bootstrap -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
+
+	<!--datatables-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.1/css/fixedHeader.dataTables.min.css">
+	<!--bootstrap integration-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.1/css/fixedHeader.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.bootstrap.min.css">
+
+	<!--local style-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- open sans -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">	
+
+	<!--font-awesome glifs-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- apple device -->
+	<link rel="apple-touch-icon" href="images/ai-logo_04.png">
+	<meta name="apple-mobile-web-app-capable" content="yes"><!--hiding safar interface components-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"><!--status bar appearance-->
+	<meta name="viewport" content="width=device-width"><!--viewport width, prevent scaling-->
+	<meta name="viewport" content="initial-scale=1.0"><!--viewport scale-->
+
+	</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>	      
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Dashboard</a></li>
+	        <li><a href="index.html">Balances</a></li>	        
+	        <li><a href="#">Reports</a></li>
+	        <li><a href="#">Statements</a></li>
+	        <li><a href="#">Downloads</a></li>
+	        <li class="active"><a href="setup.html">Setup</a></li>
+	      </ul>
+	    </div>
+		</div>
+	</nav>
+	
+	<div class="container setup" id="main">
+		<h3>Setup</h3>
+
+		<div class="row">			
+			<div class="col-xs-12">
+				<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				          Hierarchies <span class="caret"></span>
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+				      <ul class="list-group">
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Set Hierarchy</h5>
+    							<small class="list-group-item-text">Create and manage multiple hierarchies to support your reporting and allocation needs. Change the active hierarchy at any time to report on different scenarios.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Tree Builder</h5>
+    							<small class="list-group-item-text">Add, move, rename and remove nodes from your active hierarchy.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Edit Levels</h5>
+    							<small class="list-group-item-text">Manage the nodes, accounts and services in your hierarchy.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">View Change History</h5>
+    							<small class="list-group-item-text">Manage the nodes, accounts and services in your hierarchy.</small>
+						    </li>
+						  </ul>
+				    </div>
+				  </div><!-- /.panel -->
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingTwo">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				          Descriptions <span class="caret"></span>
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				      <ul class="list-group">
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Phone Numbers</h5>
+    							<small class="list-group-item-text">As part of Mobile Management, you can designate phone numbers that when called are corporate or personal responsibility.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Time Periods</h5>
+    							<small class="list-group-item-text">Designate time segments that correspond to your daily schedule.</small>
+						    </li>
+						  </ul>
+				    </div>
+				  </div><!-- /.panel -->
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingThree">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				          Tools <span class="caret"></span>
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+				      <ul class="list-group">
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Filters</h5>
+    							<small class="list-group-item-text">Designate criteria to locate specific data.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Markups</h5>
+    							<small class="list-group-item-text">Create percentage or fixed amount markups that you can use on reports that you make for your customers.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Budgets</h5>
+    							<small class="list-group-item-text">Add a budget to each of your accounts to see how you are tracking toward your expectations.</small>
+						    </li>
+						  </ul>
+				    </div>
+				  </div><!-- /.panel -->
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingFour">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+				          User Profiles <span class="caret"></span>
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+				      <ul class="list-group">
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Personal Information</h5>
+    							<small class="list-group-item-text">Designate criteria to locate specific data.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Preferences</h5>
+    							<small class="list-group-item-text">Change your preferences.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Mailing Address</h5>
+    							<small class="list-group-item-text">Create a default mailing address for use when viewing multiple statements.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Manage Users</h5>
+    							<small class="list-group-item-text">Add, edit, and remove users and edit their access rights and permissions.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Paperless Billing</h5>
+    							<small class="list-group-item-text">Change the paperless billing settings for your accounts.</small>
+						    </li>
+						  </ul>
+				    </div>
+				  </div><!-- /.panel -->
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingFive">
+				      <h4 class="panel-title">
+				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+				          Payment Information <span class="caret"></span>
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+				      <ul class="list-group">
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Payment Sources</h5>
+    							<small class="list-group-item-text">Add, edit, and remove payment sources.</small>
+						    </li>
+						    <li class="list-group-item">
+						    	<h5 class="list-group-item-heading">Dispute Status</h5>
+    							<small class="list-group-item-text">Check the status of disputes.</small>
+						    </li>
+						  </ul>
+				    </div>
+				  </div><!-- /.panel -->
+				</div>
+			</div>  
+		</div><!-- /.row -->
+		
+	</div>
+
+<!--jquery-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<!--bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--datatables-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script><!--bootstrap integration-->
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.1/js/dataTables.fixedHeader.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.0.2/js/responsive.bootstrap.min.js"></script>
+
+<!--counter interaction-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+
+
+<script>	
+	$(document).ready(function(){
+		//tooltips
+		function isTouchDevice(){//is touch device
+			return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+		}
+		if(isTouchDevice()===false) {//if so then tooltip
+			$('#btn-full-screen').tooltip({
+				animation: true,
+				container: 'body',
+				placement: 'auto'
+			})
+		}
+		
+		//counter
+		$('.blurb h4').counterUp({
+				delay: 10, // the delay time in ms
+				time: 1000 // the speed time in ms
+		});
+
+
+		//create data table1
+		var table1 = $('#table1').DataTable({
+			"searching": false,
+			"paging": false,
+			"iDisplayLength": 50,
+			"info": false,
+			fixedHeader: false,
+			responsive: true 
+		});
+		//create data table2
+		var table2 = $('#table2').DataTable({
+			"searching": false,
+			"paging": false,
+			"iDisplayLength": 50,
+			"info": false,
+			fixedHeader: false,
+			responsive: true 
+		});		
+		//create data table2
+		var table3 = $('#table3').DataTable({
+			"searching": false,
+			"paging": false,
+			"iDisplayLength": 50,
+			"info": false,
+			fixedHeader: false,
+			responsive: true 
+		});
+		//create data table2
+		var table4 = $('#table4').DataTable({
+			"searching": false,
+			"paging": false,
+			"iDisplayLength": 50,
+			"info": false,
+			fixedHeader: false,
+			responsive: true 
+		});
+	});
+	
+</script>
+</body>
+</html>
