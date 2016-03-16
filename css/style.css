@@ -1,80 +1,88 @@
 html{
-		font-size:62.5%;
-	}
-	body{
-		background: #FAFAFA;
-		font-family:"Open Sans";
-		font-size:1.4rem;
-	}
+	font-size:62.5%;
+}
+body{
+	background: #FAFAFA;
+	font-family:"Open Sans";
+	font-size:1.4rem;
+}
 
-	#main{
-		padding-top:45px;
-	}
+#main{
+	padding-top:45px;
+}
+
+#scope-controls{
+	height:200px;
+}
+
+.btn-expand{
+	float:right;
+}
+
+.tab-content{
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#prevDay, #intraDay{
+	padding: 15px
+}
+
+#blurbs{
+	margin-top:20px;
+	margin-bottom:25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+#blurbs .blurb{
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 2px 0 #BBB;		
+
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 	
-	#scope-controls{
-		height:200px;
-	}
-	
-	.btn-expand{
-		float:right;
-	}
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+	margin-right: 10px;
+}
+#blurbs .blurb:last-child{
+	margin-right: 0;
+}
+#blurbs .blurb h4{
+	margin-top: 0;
+}
+#blurbs .blurb h4:before{
+	content: "$";
+}
 
-	.tab-content{
-	  background: #fff;
-    border: 1px solid #ddd;
-    border-top: 0;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-	}
-
-	#prevDay, #intraDay{
-		padding: 15px
-	}
-
-	#blurbs{
-		margin-top:20px;
-		margin-bottom:25px;
-		display: flex;
-		flex-wrap: wrap;
-	}
+@media(min-width: 750px){
 	#blurbs .blurb{
-		background-color: #FFF;
-		border: 1px solid #DDD;
-		border-radius: 5px;
-		box-shadow: 0 2px 0 #BBB;		
-
-		display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-		
-		font-size: 1.8rem;
-		margin-bottom: 15px;
-		margin-right: 10px;
+		flex: 1;
 	}
-	#blurbs .blurb:last-child{
-		margin-right: 0;
+}
+@media(max-width: 750px){
+	#blurbs .blurb{
+		flex: 0 0 100%;
+	}
+	#blurbs .blurb h5{
+		font-size: 1.8rem;
 	}
 	#blurbs .blurb h4{
-		margin-top: 0;
+		font-size: 2.5rem;
 	}
-	#blurbs .blurb h4:before{
-		content: "$";
-	}
+}
 
-	@media(min-width: 750px){
-		#blurbs .blurb{
-			flex: 1;
-		}
-	}
-	@media(max-width: 750px){
-		#blurbs .blurb{
-			flex: 0 0 100%;
-		}
-		#blurbs .blurb h5{
-			font-size: 1.8rem;
-		}
-		#blurbs .blurb h4{
-			font-size: 2.5rem;
-		}
-	}
+.setup .list-group-item-heading{
+	font-weight: 700;
+}
+.setup ul.list-group li:hover{
+	background: #F1F7FE;
+	cursor: pointer
+}
