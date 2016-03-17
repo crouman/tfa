@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>TFA - Setup</title>
+
+	<!-- bootstrap -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
+
+	<!--datatables-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.1/css/fixedHeader.dataTables.min.css">
+	<!--bootstrap integration-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.1/css/fixedHeader.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.bootstrap.min.css">
+
+	<!--local style-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/tca-glyphs.css">
+
+	<!-- open sans -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">	
+
+	<!--font-awesome glifs-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- apple device -->
+	<link rel="apple-touch-icon" href="images/ai-logo_04.png">
+	<meta name="apple-mobile-web-app-capable" content="yes"><!--hiding safar interface components-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"><!--status bar appearance-->
+	<meta name="viewport" content="width=device-width"><!--viewport width, prevent scaling-->
+	<meta name="viewport" content="initial-scale=1.0"><!--viewport scale-->
+
+	</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>	      
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Dashboard</a></li>
+	        <li><a href="index.html">Balances</a></li>	        
+	        <li><a href="#">Reports</a></li>
+	        <li><a href="#">Statements</a></li>
+	        <li><a href="#">Downloads</a></li>
+	        <li class="active"><a href="setup.html">Setup</a></li>
+	      </ul>
+	    </div>
+		</div>
+	</nav>
+	
+	<div class="container setup" id="main">
+		<h3>Downloads</h3>
+		<hr />
+
+		<div class="row"><!-- filter -->
+			<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+				<div class="form-group">
+			    <label class="control-label">Hiererchy</label>
+		      <p>Corporate</p>
+			  </div>
+		  </div>	
+
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3"><!-- filter -->
+				<div class="form-group">
+		      <label>Level</label>
+		      <select class="form-control">
+		        <option>Sales</option>
+		        <option>2</option>
+		      </select>
+		    </div>
+			</div>	  
+
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3"><!-- filter -->
+				<div class="form-group">
+		      <label>Date</label>
+		      <select class="form-control">
+		        <option>Custom Date Range</option>
+		        <option selected>March 14</option>
+		        <option>March 13</option>
+		        <option>March 12</option>
+		      </select>
+		    </div>
+			</div>	  
+		</div><!-- /.row -->
+
+		<div class="panel panel-default">
+  		<div class="panel-body">
+
+				<div class="row files-grid"><!-- files grid -->
+					
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->		
+							<div class="file">		
+								<label>Investments</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>							
+							</div>							
+						</div>	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->
+							<div class="file">		
+								<label>High Order Prefix Detail</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  
+						</div>	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->
+							<div class="file">		
+								<label>Wire Activity</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  
+						</div>	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->				
+							<div class="file">		
+								<label>Credit Sweep</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  	  
+						</div>	  	  	
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->				
+							<div class="file">				
+								<label>Lockbox Detail</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  	  
+						</div>	  	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->						
+							<div class="file">		
+								<label>ACH Entries Resubmitted via ACH</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  	  
+						</div>	  	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->						
+							<div class="file">		
+								<label>Zero Balance Accounts</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  	  
+						</div>	  	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->					
+							<div class="file">			
+								<label>EDI Remittance</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  	  
+						</div>	  	  
+						<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4"><!-- file -->					
+							<div class="file">			
+								<label>Deposit Distribution</label>
+								<span class="pull-left">
+									<i class="tca-icon-file-pdf-o"></i>
+								</span>
+							</div>	  
+						</div>	  
+					</div>	  
+				</div><!-- /.row -->
+
+			</div><!-- /.panel-body -->
+		</div><!-- /.panel -->
+	</div>
+
+<!--jquery-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<!--bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+</html>
