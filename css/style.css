@@ -109,3 +109,22 @@ body{
 tr.selected{
 	background-color: #F1F7FE !important;
 }
+
+.files-grid label{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.files-grid i{
+	font-size: 3.5rem;
+}
+.files-grid > div{
+	cursor: pointer;
+	padding-bottom: 15px;
+}
+.files-grid .file{
+  border-radius: 5px;
+  margin: -5px;
+	padding: 5px;
+}
+.files-grid .file:hover{
+	background-color: #F1F7FE !important;
