@@ -11,8 +11,28 @@ body{
 	padding-top:45px;
 }
 
+#dashboard{
+	padding-top:65px;
+}
+
+.headline{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.headline a{
+	text-decoration: none;
+}
+.message{
+	margin-top: 10px;
+}
+
 #scope-controls{
 	height:200px;
+}
+
+.welcome{
+	margin-top: 25px;
 }
 
 .btn-expand{
