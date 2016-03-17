@@ -82,7 +82,30 @@ body{
 .setup .list-group-item-heading{
 	font-weight: 700;
 }
-.setup ul.list-group li:hover{
+.setup div.list-group a:hover{
 	background: #F1F7FE;
 	cursor: pointer
+}
+.setup div.list-group a:hover .list-group-item-heading{
+	text-decoration: underline;
+}
+
+.breadcrumbs{
+	font-size: 1.1rem;
+	color: #AAA;
+	margin-top: 15px;
+	text-transform: uppercase;
+}
+.breadcrumbs a:hover{
+	color: #444;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.hierarchy-setup .tab-pane{
+	padding:15px;
+}
+
+tr.selected{
+	background-color: #F1F7FE !important;
 }
