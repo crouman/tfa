@@ -78,16 +78,16 @@
 .tca-icon-headset:before {
     content: "\e901";
 }
-.tca-icon-file-pdf-o:before {
+.tca-icon-file-pdf:before {
     content: "\e904";
 }
-.tca-icon-file-excel-o:before {
+.tca-icon-file-xls:before {
     content: "\e905";
 }
-.tca-icon-file-o:before {
+.tca-icon-file:before {
     content: "\e906";
 }
-.tca-icon-file-archive-o:before {
+.tca-icon-file-zip:before {
     content: "\e907";
 }
 

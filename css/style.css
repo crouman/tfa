@@ -128,3 +128,13 @@ tr.selected{
 }
 .files-grid .file:hover{
 	background-color: #F1F7FE !important;
+}
+.files-grid .file .tca-icon-file-pdf{
+	color: #C30000;
+}
+.files-grid .file .tca-icon-file-xls{
+	color: #5CB85C;
+}
+.files-grid .file .tca-icon-file-zip{
+	color: #F0AD4E;
+}
