@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>TFA - Notifications</title>
+
+	<!-- bootstrap -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
+
+	<!--datatables-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.1/css/fixedHeader.dataTables.min.css">
+	<!--bootstrap integration-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.1/css/fixedHeader.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.bootstrap.min.css">
+
+	<!--local style-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/tca-glyphs.css">
+
+	<!-- open sans -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">	
+
+	<!--font-awesome glifs-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- apple device -->
+	<link rel="apple-touch-icon" href="images/ai-logo_04.png">
+	<meta name="apple-mobile-web-app-capable" content="yes"><!--hiding safar interface components-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"><!--status bar appearance-->
+	<meta name="viewport" content="width=device-width"><!--viewport width, prevent scaling-->
+	<meta name="viewport" content="initial-scale=1.0"><!--viewport scale-->
+
+	</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>	      
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="index.html">Dashboard</a></li>
+	        <li><a href="balances.html">Balances</a></li>       
+	        <li><a href="#">Reports</a></li>
+	        <li><a href="#">Statements</a></li>
+	        <li><a href="downloads.html">Downloads</a></li>
+	        <li class="active"><a href="notifications.html">Notifications</a></li>
+	        <li><a href="setup.html">Setup</a></li>
+	      </ul>
+	    </div>
+		</div>
+	</nav>
+	
+	<div class="container" id="main">
+		
+		<h3>Notifications</h3>
+
+		<div class="row">			
+			<div class="col-xs-12">
+			  <!-- tabs -->
+			  <ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#system" role="tab" data-toggle="tab">System Notifications</a></li>
+			    <li role="presentation"><a href="#custom" role="tab" data-toggle="tab">Custom Notifications</a></li>			   
+			    <li role="presentation"><a href="#log" aria-controls="levels" role="tab" data-toggle="tab">Event Log</a></li>			   
+			  </ul>
+
+			  <!-- tab panes -->
+			  <div class="tab-content hierarchy-setup">
+			    <div role="tabpanel" class="tab-pane fade in active" id="system">			    	
+		    		<table class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
+							<thead>
+								<tr>
+									<th>Active</th>
+									<th>Notification</th>
+									<th>Recipients</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center"><input type="checkbox" /></td>
+									<td>
+										<a href="#">EFTPOS Transactions</a>
+										<span class="notif-desc">The number of EFTPOS (credit card) transactions fall 5% below the same period last year</span>
+									</td>
+									<td>gholt@cvtech.com, slem@cvtech.com <!-- <a href="#" class=" notif-edit" title="Edit Recipients"><i class="tca-icon-edit"></i></a> --></td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" /></td>
+									<td>
+										<a href="#">EFTPOS Transaction Volume</a> 
+										<span class="notif-desc">The dollar volume of EFTPOS transactions increases 3% above the same period last year</span>
+									</td>
+									<td>gholt@cvtech.com, slem@cvtech.com <!-- <a href="#" class=" notif-edit" title="Edit Recipients"><i class="tca-icon-edit"></i></a> --></td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" checked /></td>
+									<td>
+										<a href="#">Receivables</a> 
+										<span class="notif-desc">Receivables for all locations increase or decrease by more 3% compared with same day in the previous week</span>
+									</td>
+									<td>gholt@cvtech.com, slem@cvtech.com <!-- <a href="#" class=" notif-edit" title="Edit Recipients"><i class="tca-icon-edit"></i></a> --></td>
+								</tr>
+							</tbody>
+						</table>
+			    </div><!-- /.tab-panel -->
+			    
+			    <div role="tabpanel" class="tab-pane fade in" id="custom"> 
+			    	<div class="table-actions">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newNotif">
+							  Create Notification
+							</button>
+						</div>
+
+						<table class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
+							<thead>
+								<tr>
+									<th>Active</th>
+									<th>Notification</th>
+									<th>Recipients</th>
+									<th><i class="tca-icon-trash"></i></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center"><input type="checkbox" /></td>
+									<td>
+										<a href="#">EFTPOS Transactions</a>
+										<span class="notif-desc">The number of EFTPOS (credit card) transactions fall 5% below the same period last year</span>
+									</td>
+									<td>gholt@cvtech.com, slem@cvtech.com</td>
+									<td class="notif-delete"><i class="tca-icon-trash" title="Delete Notification"></i></td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" /></td>
+									<td>
+										<a href="#">EFTPOS Transaction Volume</a> 
+										<span class="notif-desc">The dollar volume of EFTPOS transactions increases 3% above the same period last year</span>
+									</td>
+									<td>gholt@cvtech.com, slem@cvtech.com</td>
+									<td class="notif-delete"><i class="tca-icon-trash" title="Delete Notification"></i></td>
+								</tr>
+								<tr>
+									<td align="center"><input type="checkbox" checked /></td>
+									<td>
+										<a href="#">Receivables</a> 
+										<span class="notif-desc">Receivables for all locations increase or decrease by more 3% compared with same day in the previous week</span>
+									</td>
+									<td>gholt@cvtech.com, slem@cvtech.com</td>
+									<td class="notif-delete"><i class="tca-icon-trash" title="Delete Notification"></i></td>
+								</tr>
+							</tbody>
+						</table>
+
+			    </div>
+			    <div role="tabpanel" class="tab-pane fade in" id="log"> </div>
+			</div><!-- /.tab-content -->
+		</div><!-- /.row -->
+
+		<!-- add notification dialog -->
+		<div class="modal fade" id="newNotif" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Create Notification</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary">Create Notification</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+	</div>
+
+	<!--jquery-->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!--bootstrap-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-	<title>TFA Balances UI</title>
+	<title>TFA - Dashboard</title>
 
 	<!-- bootstrap -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
@@ -16,6 +16,7 @@
 
 	<!--local style-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/tca-glyphs.css">
 
 	<!-- open sans -->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">	
@@ -46,377 +47,128 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li><a href="#">Dashboard</a></li>
-	        <li class="active"><a href="#">Balances</a></li>	        
+	        <li class="active"><a href="balances.html">Balances</a></li>	        
 	        <li><a href="#">Reports</a></li>
 	        <li><a href="#">Statements</a></li>
 	        <li><a href="downloads.html">Downloads</a></li>
+	        <li><a href="notifications.html">Notifications</a></li>
 	        <li><a href="setup.html">Setup</a></li>
 	      </ul>
 	    </div>
 		</div>
 	</nav>
 	
-	<div class="container" id="main">
-		<h3>Account Summary</h3>
+	<div class="container" id="dashboard">
+		<div class="row">			
+			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+				<h5>Welcome, John Brennan</h5>
+				<h6>Last login: 15/3/16 2:13PM</h6>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+				<div class="panel panel-default">
+				  <div class="panel-heading">Merchant Transaction Volume</div>
+				  <div class="panel-body">
+				    <canvas id="line-chart-1"></canvas>
+				  </div>
+				</div>
 
-		<div class="row">
-			<!-- blurbs accross the top -->
-			<div class="col-xs-12">
-				<div id="blurbs">			
-					<div class="blurb">
-						<h5>Opening Ledger</h5>
-						<h4>500,000.00</h4>
-					</div>		
-					<div class="blurb">
-						<h5>Debits</h5>
-						<h4>500,000.00</h4>
-					</div>				
-					<div class="blurb">
-						<h5>Credits</h5>
-						<h4>500,000.00</h4>
-					</div>		
-					<div class="blurb">
-						<h5>Closing Ledger</h5>
-						<h4>500,000.00</h4>
-					</div>
-					<div class="blurb">
-						<h5>Closing Available</h5>
-						<h4>350,000.00</h4>
-					</div>
-					<div class="blurb">
-						<h5>1 Day Float</h5>
-						<h4>50,000.00</h4>
-					</div>
-					<div class="blurb">
-						<h5>2+ Day Float</h5>
-						<h4>125,752.53</h4>
-					</div>
+				<div class="panel panel-default">
+				  <div class="panel-heading">Monthly Spend</div>
+				  <div class="panel-body">
+				    <canvas id="bar-chart-1"></canvas>
+				  </div>
 				</div>
 			</div>
-		</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+				<div class="panel panel-default">
+				  <div class="panel-heading">Merchant Transaction Volume</div>
+				  <div class="panel-body">
+				    <canvas id="line-chart-2"></canvas>
+				  </div>
+				</div>
 
-		<div class="row">			
-			<div class="col-xs-12">
-			  <!-- tabs -->
-			  <ul class="nav nav-tabs" role="tablist">
-			    <li role="presentation" class="active"><a href="#intraDay" aria-controls="intraDay" role="tab" data-toggle="tab">Intraday</a></li>
-			    <li role="presentation"><a href="#prevDay" aria-controls="prevDay" role="tab" data-toggle="tab">Previous</a></li>			   
-			  </ul>
+				<div class="panel panel-default">
+				  <div class="panel-heading">Monthly Spend</div>
+				  <div class="panel-body">
+				    <canvas id="bar-chart-2"></canvas>
+				  </div>
+				</div>
 
-			  <!-- tab panes -->
-			  <div class="tab-content">
-			    <div role="tabpanel" class="tab-pane fade in active" id="prevDay">			    	
-		    		<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingOne">
-						      <h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						          GFS Bank (11235432) <span class="caret"></span>
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-						      <div class="panel-body">
-										<table id="table1" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
-											<thead>
-												<tr>
-													<th>Opening Ledger</th>
-													<th>Debits</th>
-													<th>Credts</th>
-													<th>Closing Ledger</th>
-													<th>Closing Available</th>
-													<th>1 Day Float</th>
-													<th>2+ Day Float</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-											</tbody>
-										</table>
+			</div>
+		</div><!-- /.row -->
 
-						      </div>
-						    </div>
-						  </div>
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingTwo">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						          XYZ Bank (52134321) <span class="caret"></span>
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="panel-body">
-						      	<table id="table2" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
-											<thead>
-												<tr>
-													<th>Opening Ledger</th>
-													<th>Debits</th>
-													<th>Credts</th>
-													<th>Closing Ledger</th>
-													<th>Closing Available</th>
-													<th>1 Day Float</th>
-													<th>2+ Day Float</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-											</tbody>
-										</table>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-			    </div><!-- /.tab-panel -->
-			    
-			    <div role="tabpanel" class="tab-pane fade in" id="intraDay">
-			    	<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingThree">
-						      <h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-						          GFS Bank (11235432) <span class="caret"></span>
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-						      <div class="panel-body">
-										<table id="table3" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
-											<thead>
-												<tr>
-													<th>Opening Ledger</th>
-													<th>Debits</th>
-													<th>Credts</th>
-													<th>Closing Ledger</th>
-													<th>Closing Available</th>
-													<th>1 Day Float</th>
-													<th>2+ Day Float</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-											</tbody>
-										</table>
+		<div class="row">
+			<div class="col-md-offset-2 col-xs-12 col-sm-6 col-md-5 col-lg-5">
+				<div class="panel panel-info messages"><!-- news -->
+				  <div class="panel-heading">Recent Messages <span class="pull-right"><a href="#">All Messages</a></span></div>
+				  <ul class="list-group">
+				    <li class="list-group-item">				    	
+				    	<div class="headline" title="International Payments greater than $250,000 02/02/2016">
+				    		<a data-toggle="collapse" href="#message1">
+								  <i class="fa fa-plus"></i> 
+								</a>
+								<strong class="text-danger">Alert:</strong> International Payments greater than $250,000 (Apr 2)
+							</div>
+				    	<div class="collapse message" id="message1">
+				    	An alert was triggered on Apr 1, 2016 for "International Payments greater than $250,000" based on a calculated "Transaction Volume" of 2 for the criteria specified for this alert.
+				    	</div>
+				    </li>
+				    <li class="list-group-item">				    	
+				    	<div class="headline" title="International Payments greater than $250,000 02/02/2016">
+				    		<a data-toggle="collapse" href="#message1">
+								  <i class="fa fa-plus"></i> 
+								</a>
+								<strong class="text-danger">Alert:</strong> International Payments greater than $250,000 (Apr 2)
+							</div>
+				    	<div class="collapse message" id="message1">
+				    	An alert was triggered on Apr 1, 2016 for "International Payments greater than $250,000" based on a calculated "Transaction Volume" of 2 for the criteria specified for this alert.
+				    	</div>
+				    </li>
+				  </ul>
+				</div><!-- /.panel -->
+			</div><!-- /.col -->
 
-						      </div>
-						    </div>
-						  </div>
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingFour">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-						          XYZ Bank (52134321) <span class="caret"></span>
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-						      <div class="panel-body">
-						      	<table id="table4" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
-											<thead>
-												<tr>
-													<th>Opening Ledger</th>
-													<th>Debits</th>
-													<th>Credts</th>
-													<th>Closing Ledger</th>
-													<th>Closing Available</th>
-													<th>1 Day Float</th>
-													<th>2+ Day Float</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-												<tr>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-													<td>$000,000.00</td>
-												</tr>
-											</tbody>
-										</table>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-					</div>	
-			  </div>
-			</div><!-- /.tab-content -->
+			<!-- report orders -->
+			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+				<div class="panel panel-success"><!-- news -->
+				  <div class="panel-heading">Report Order Status</div>
+				  <ul class="list-group">
+				    <li class="list-group-item completed-reports">				    	
+				    	<i class="tca-icon-check"></i>
+				    	<a href="#" class="report-name">Completed Report Orders</a>
+				    	<span class="pull-right">15</span>
+				    </li>
+				    <li class="list-group-item pending-reports">				    	
+				    	<i class="tca-icon-ellipsis-h"></i>
+				    	<a href="#" class="report-name">Pending Report Orders</a>
+				    	<span class="pull-right">5</span>
+				    </li>
+				  </ul>
+				</div><!-- /.panel -->
+			</div><!-- /.col -->
+
 		</div><!-- /.row -->
 		
 	</div>
 
-<!--jquery-->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<!--bootstrap-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<!--datatables-->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script><!--bootstrap integration-->
-<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.1/js/dataTables.fixedHeader.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
+	<!--jquery-->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!--bootstrap-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!--datatables-->
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script><!--bootstrap integration-->
+	<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.1/js/dataTables.fixedHeader.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.0.2/js/responsive.bootstrap.min.js"></script>
 
-<!--counter interaction-->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-
-
-<script>	
-	$(document).ready(function(){
-		//tooltips
-		function isTouchDevice(){//is touch device
-			return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-		}
-		if(isTouchDevice()===false) {//if so then tooltip
-			$('#btn-full-screen').tooltip({
-				animation: true,
-				container: 'body',
-				placement: 'auto'
-			})
-		}
-		
-		//counter
-		$('.blurb h4').counterUp({
-				delay: 10, // the delay time in ms
-				time: 1000 // the speed time in ms
-		});
-
-
-		//create data table1
-		var table1 = $('#table1').DataTable({
-			"searching": false,
-			"paging": false,
-			"iDisplayLength": 50,
-			"info": false,
-			fixedHeader: false,
-			responsive: true 
-		});
-		//create data table2
-		var table2 = $('#table2').DataTable({
-			"searching": false,
-			"paging": false,
-			"iDisplayLength": 50,
-			"info": false,
-			fixedHeader: false,
-			responsive: true 
-		});		
-		//create data table2
-		var table3 = $('#table3').DataTable({
-			"searching": false,
-			"paging": false,
-			"iDisplayLength": 50,
-			"info": false,
-			fixedHeader: false,
-			responsive: true 
-		});
-		//create data table2
-		var table4 = $('#table4').DataTable({
-			"searching": false,
-			"paging": false,
-			"iDisplayLength": 50,
-			"info": false,
-			fixedHeader: false,
-			responsive: true 
-		});
-	});
+	<!-- charts -->
+	<script src="js/charts/Chart.js"></script>
 	
-</script>
+	<script src="js/charts/mycharts/line-chart.js"></script>
+	<script src="js/charts/mycharts/bar-chart.js"></script>
+	<script src="js/charts/mycharts/chart-load.js"></script>
+
 </body>
 </html>

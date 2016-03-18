@@ -11,8 +11,39 @@ body{
 	padding-top:45px;
 }
 
+#dashboard{
+	padding-top:65px;
+}
+
+.headline{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-width: 100px;
+}
+.headline a{
+	text-decoration: none;
+}
+.message{
+	margin-top: 10px;
+}
+
+.completed-reports i{
+	color: #337ab7;
+}
+.completed-reports i, .pending-reports i{
+	font-size: 1.6rem;	
+}
+.report-name{
+	padding-left: 10px;
+}
+
 #scope-controls{
 	height:200px;
+}
+
+.welcome{
+	margin-top: 25px;
 }
 
 .btn-expand{
@@ -128,3 +159,45 @@ tr.selected{
 }
 .files-grid .file:hover{
 	background-color: #F1F7FE !important;
+}
+.files-grid .file .tca-icon-file-pdf{
+	color: #C30000;
+}
+.files-grid .file .tca-icon-file-xls{
+	color: #5CB85C;
+}
+.files-grid .file .tca-icon-file-zip{
+	color: #F0AD4E;
+}
+
+/* Notifications */
+#system table th:first-child{
+	width: 65px;
+}
+#custom table th:last-child{
+	text-align: center;
+	font-size: 1.6rem;
+}
+.notif-desc{
+	display: block;
+	font-size: 1.1rem;
+	color: #777;
+}
+.notif-edit{
+	float: right;
+}
+.notif-edit:hover, .notif-edit:active,.notif-edit:focus{	
+	text-decoration: none;
+}
+
+.table-actions{
+	margin-bottom: 15px;
+}
+.notif-delete i{
+	color: #D9534F;
+	cursor: pointer;
+	font-size: 1.6rem;
+}
+.notif-delete{
+	text-align: center;
+}
