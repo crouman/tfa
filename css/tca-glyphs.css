@@ -90,4 +90,10 @@
 .tca-icon-file-zip:before {
     content: "\e907";
 }
+.tca-icon-mail:before {
+    content: "\e908";
+}
+.tca-icon-ellipsis-h:before {
+    content: "\e909";
+}
 

@@ -19,12 +19,23 @@ body{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	min-width: 100px;
 }
 .headline a{
 	text-decoration: none;
 }
 .message{
 	margin-top: 10px;
+}
+
+.completed-reports i{
+	color: #337ab7;
+}
+.completed-reports i, .pending-reports i{
+	font-size: 1.6rem;	
+}
+.report-name{
+	padding-left: 10px;
 }
 
 #scope-controls{

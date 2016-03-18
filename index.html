@@ -16,6 +16,7 @@
 
 	<!--local style-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/tca-glyphs.css">
 
 	<!-- open sans -->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700">	
@@ -76,35 +77,6 @@
 				    <canvas id="bar-chart-1"></canvas>
 				  </div>
 				</div>
-
-				<div class="panel panel-info messages"><!-- news -->
-				  <div class="panel-heading">Recent Messages <span class="pull-right"><a href="#">All Messages</a></span></div>
-				  <ul class="list-group">
-				    <li class="list-group-item">				    	
-				    	<span class="headline">
-				    		<a data-toggle="collapse" href="#message1">
-								  <i class="fa fa-plus"></i> 
-								</a>
-								Alert: International Payments greater than $250,000 02/02/2016
-							</span>
-				    	<div class="collapse message" id="message1">
-				    	An alert was triggered on 31/1/2016 for "International Payments greater than $250,000" based on a calculated "Transaction Volume" of 2 for the criteria specified for this alert.
-				    	</div>
-				    </li>
-				    <li class="list-group-item">				    	
-				    	<span class="headline">
-				    		<a data-toggle="collapse" href="#message2">
-								  <i class="fa fa-plus"></i> 
-								</a>
-								Alert: International Payments greater than $250,000 02/02/2016
-							</span>
-				    	<div class="collapse message" id="message2">
-				    	An alert was triggered on 31/1/2016 for "International Payments greater than $250,000" based on a calculated "Transaction Volume" of 2 for the criteria specified for this alert.
-				    	</div>
-				    </li>
-				  </ul>
-				</div>
-
 			</div>
 			
 			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
@@ -123,6 +95,58 @@
 				</div>
 
 			</div>
+		</div><!-- /.row -->
+
+		<div class="row">
+			<div class="col-md-offset-2 col-xs-12 col-sm-6 col-md-5 col-lg-5">
+				<div class="panel panel-info messages"><!-- news -->
+				  <div class="panel-heading">Recent Messages <span class="pull-right"><a href="#">All Messages</a></span></div>
+				  <ul class="list-group">
+				    <li class="list-group-item">				    	
+				    	<div class="headline" title="International Payments greater than $250,000 02/02/2016">
+				    		<a data-toggle="collapse" href="#message1">
+								  <i class="fa fa-plus"></i> 
+								</a>
+								<strong class="text-danger">Alert:</strong> International Payments greater than $250,000 (Apr 2)
+							</div>
+				    	<div class="collapse message" id="message1">
+				    	An alert was triggered on Apr 1, 2016 for "International Payments greater than $250,000" based on a calculated "Transaction Volume" of 2 for the criteria specified for this alert.
+				    	</div>
+				    </li>
+				    <li class="list-group-item">				    	
+				    	<div class="headline" title="International Payments greater than $250,000 02/02/2016">
+				    		<a data-toggle="collapse" href="#message1">
+								  <i class="fa fa-plus"></i> 
+								</a>
+								<strong class="text-danger">Alert:</strong> International Payments greater than $250,000 (Apr 2)
+							</div>
+				    	<div class="collapse message" id="message1">
+				    	An alert was triggered on Apr 1, 2016 for "International Payments greater than $250,000" based on a calculated "Transaction Volume" of 2 for the criteria specified for this alert.
+				    	</div>
+				    </li>
+				  </ul>
+				</div><!-- /.panel -->
+			</div><!-- /.col -->
+
+			<!-- report orders -->
+			<div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+				<div class="panel panel-success"><!-- news -->
+				  <div class="panel-heading">Report Order Status</div>
+				  <ul class="list-group">
+				    <li class="list-group-item completed-reports">				    	
+				    	<i class="tca-icon-check"></i>
+				    	<a href="#" class="report-name">Completed Report Orders</a>
+				    	<span class="pull-right">15</span>
+				    </li>
+				    <li class="list-group-item pending-reports">				    	
+				    	<i class="tca-icon-ellipsis-h"></i>
+				    	<a href="#" class="report-name">Pending Report Orders</a>
+				    	<span class="pull-right">5</span>
+				    </li>
+				  </ul>
+				</div><!-- /.panel -->
+			</div><!-- /.col -->
+
 		</div><!-- /.row -->
 		
 	</div>
