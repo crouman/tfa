@@ -169,3 +169,35 @@ tr.selected{
 .files-grid .file .tca-icon-file-zip{
 	color: #F0AD4E;
 }
+
+/* Notifications */
+#system table th:first-child{
+	width: 65px;
+}
+#custom table th:last-child{
+	text-align: center;
+	font-size: 1.6rem;
+}
+.notif-desc{
+	display: block;
+	font-size: 1.1rem;
+	color: #777;
+}
+.notif-edit{
+	float: right;
+}
+.notif-edit:hover, .notif-edit:active,.notif-edit:focus{	
+	text-decoration: none;
+}
+
+.table-actions{
+	margin-bottom: 15px;
+}
+.notif-delete i{
+	color: #D9534F;
+	cursor: pointer;
+	font-size: 1.6rem;
+}
+.notif-delete{
+	text-align: center;
+}
